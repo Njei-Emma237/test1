@@ -1,0 +1,14 @@
+html {
+  touch-action: manipulation;
+}
+html[Attributes Style] {
+  -webkit-locale: "en";
+}
+user agent stylesheet
+:root {
+  view-transition-name: root;
+}
+user agent stylesheet
+html {
+  display: block;
+}

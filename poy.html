@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Game</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+<script>
+var ctx = canvas.getContext("2d");
+var ball = {
+  x: 250,
+  y: 250,
+  vx: 5,
+  vy: 5
+};
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "red";
+  ctx.fillRect(ball.x, ball.y, 50, 50);
+}
+
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode == 38) {
+    ball.vy -= 5;
+  } else if (event.keyCode == 40) {
+    ball.vy += 5;
+  }
+});
+
+setInterval(draw, 20);
+</script>
+</body>
+</html>
